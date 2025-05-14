@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FREEFIRE BETA NATHAEL</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(-45deg, #000000, #1a1a1a, #333333, #000000);
+      background-size: 400% 400%;
+      animation: gradientBG 10s ease infinite;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      min-height: 100vh;
+    }@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  display: none;
+}
+header img {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+}
+header h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+.login-container, .dashboard-container {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(255,255,255,0.1);
+  width: 320px;
+  text-align: center;
+  animation: fadeIn 1.2s ease-in-out;
+}
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+.tempel-btn, button {
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.tempel-btn:hover, button:hover {
+  background-color: white;
+  color: black;
+}
+.button-group button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+}
+.note {
+  margin-top: 20px;
+  font-size: 12px;
+  color: #cccccc;
+  text-align: center;
+  padding: 0 15px;
+}
+footer {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #777;
+  text-align: center;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+  </style>
+</head>
+<body>
+  <header id="mainHeader">
+    <img src="https://pomf2.lain.la/f/0574tbl9.jpg" alt="Header Image">
+    <h1>FREEFIRE BETA NATHAEL</h1>
+  </header>  <div class="login-container" id="loginPage">
+    <h2>Masukkan Kunci</h2>
+    <div>
+      <input type="text" id="keyInput" placeholder="Masukkan kunci">
+      <button class="tempel-btn" onclick="pasteClipboard()">Tempel</button>
+    </div>
+    <button onclick="checkLogin()">LOGIN</button>
+  </div>  <div class="dashboard-container" id="dashboardPage" style="display: none;">
+    <h2>Selamat Datang!</h2>
+    <div class="button-group">
+      <button onclick="window.open('https://vm.tiktok.com/ZSha93Pwc/', '_blank')">Tutorial APK 2</button>
+      <button onclick="window.open('https://www.mediafire.com/file/ixhnpxdgvzzyh1f/Kibo+Free+Proxy+1.0.3.apk/file', '_blank')">APK 1</button>
+      <button onclick="window.open('https://www.mediafire.com/file/sixkb5ao7j97hyg/Astute+Beta+Server_1.0.apk/file', '_blank')">APK 2</button>
+      <button onclick="window.open('https://www.mediafire.com/file/llu4uryq3yxacm9/Free_Fire_Global_v1.109.x.apk/file', '_blank')">DOWNLOAD FF GLOBAL (wajib)</button>
+    </div>
+  </div>  <div class="note">
+    note : UNTUK TUTORIAL APK 1 COOMING SOON, untuk uid nya silahkan id akun guest yang sudah didaftarkan di freefire global, jika sudah bisa masuk JANGAN OUT YAA
+  </div>  <footer>
+    &copy;2025 nathzz
+  </footer>  <script>
+    function pasteClipboard() {
+      navigator.clipboard.readText().then(text => {
+        document.getElementById('keyInput').value = text;
+      }).catch(err => {
+        alert("Gagal menempel dari clipboard: " + err);
+      });
+    }
+
+    function checkLogin() {
+      const key = document.getElementById('keyInput').value;
+      if (key === 'nAtHaEl271112345Eyi') {
+        document.getElementById('loginPage').style.display = 'none';
+        document.getElementById('dashboardPage').style.display = 'block';
+        document.getElementById('mainHeader').style.display = 'block';
+      } else {
+        alert('Kunci salah!');
+      }
+    }
+  </script></body>
+</html>
